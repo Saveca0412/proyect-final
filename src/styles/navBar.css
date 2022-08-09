@@ -1,0 +1,51 @@
+
+.title{
+    display: block;
+    flex: 1 1;
+    font-weight: 900;
+    padding: 14px 20px;
+}
+
+.navbar{
+    color: rgb(246, 79, 79);
+}
+
+.login{
+    width: 2.5rem;
+    height: auto;
+}
+
+.login-img{
+    width: 100%;
+}
+
+.home{
+    width: 2.5rem;
+    height: auto;
+}
+
+.home-img{
+    width: 100%;
+}
+
+.cart-img{
+    width: 100%;
+}
+
+.cart{
+    width: 2.5rem;
+    height: auto;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    display: flex;
+}
+
+.navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.navbar>.container{
+    background-color: rgb(246, 79, 79);
+}
