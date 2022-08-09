@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getPurchasesThunk } from '../store/slices/purchases.slice';
+import { getPurchasesThunk } from '../store/slices/Purchases.slice';
 
 const Purchases = () => {
 
