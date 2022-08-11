@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import PurchasesItem from '../components/PurchasesItem';
 import { getPurchasesThunk } from '../store/slices/Purchases.slice';
 
 const Purchases = () => {
@@ -11,7 +12,7 @@ const Purchases = () => {
     useEffect(() =>{
         dispatch(getPurchasesThunk())
     },[])
-    
+
     return (
         <div>
             <h1> My Purchases</h1>
@@ -19,18 +20,20 @@ const Purchases = () => {
             <div>
             {
                 purchases?.map(purchase =>(
-                    <p key={purchase?.id}>
+
+                    <div key={purchase?.id}>
                     <hr />
-                        {purchase?.createdAt}
-                    <h3>
+                        <PurchasesItem purchases={purchase.cart.products} itemDate={purchase.createdAt}/>
+                    <hr />
+                    {/* <h3>
                         {purchase?.cart.products[0]?.title}
                     </h3>
-                    <p>
+                    <div>
                     PRICE: {purchase?.cart.products[0]?.price}
-                    </p>
-                    
+                    </div>
+                     */}
                     <hr />
-                    </p>
+                    </div>
                 ))
             }
             </div> 

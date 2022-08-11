@@ -6,7 +6,8 @@ import { Row, Card, Col, InputGroup, Form, Button, ListGroup } from "react-boots
 import axios from "axios";
 import '../App.css'
 import loupe from '../images/loupe.png'
-import cart from '../images/cart.png'
+import cart from '../images/cart6.gif'
+import { addCartThunk } from '../store/slices/cart.slice';
 //mason@gmail.com
 //mason1234
 
@@ -16,6 +17,8 @@ const Home = () => {
   const navigate = useNavigate();
   const [searchValue, setSearchValue] = useState("");
   const [categories, setCategories] = useState([]);
+  const [productsDetail, setProductsDetail] = useState({});
+  const [quantity, setQuantity] = useState(1)
   //const [searchByTitle, setSearchByTitle] = useState([]);
 
   const products = useSelector((state) => state.prduct);
@@ -29,6 +32,17 @@ const Home = () => {
 
   }, [])
   console.log(categories)
+
+  const sendToCart =( )=>{
+    const body = {
+      id: productsDetail.id,
+      quantity
+    }
+    dispatch( addCartThunk( body ) )
+    setQuantity(1)
+    alert( 'Sent to cart' )
+  }
+
 
   return (
     <div>
@@ -74,7 +88,7 @@ const Home = () => {
               <h4>{item.title}</h4>
             <p>Price: <br />${item.price}</p>
             </div>
-            <div className='cart_box'><img src={cart} alt="" /></div>
+            <div className='cart_box' onClick={ sendToCart }><img src={cart} alt="" /></div>
         </article>
         ))
       }

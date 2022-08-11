@@ -1,7 +1,8 @@
+
 .App {
     font-family: sans-serif;
     text-align: center;
-
+    
   }
   
 .g-4{
@@ -27,15 +28,17 @@ Card-Text{
   gap: 20px;
   padding-bottom: 30px;
   margin-top: 15px;
+
 }
 .product-card{
   margin-top: 3%;
   cursor: pointer;
-  border: .5px solid rgb(32, 30, 30);
+  border: 2px solid rgb(12, 40, 181);
   width: 250px;
   border-radius: 5%;
   padding: 10px 2% 5px 2%;
   position: relative;
+  
 }
 .product-image{
     display: block;
@@ -54,14 +57,14 @@ Card-Text{
   bottom: 5px;
   right: 5%;
   padding: 1px;
-
+  
 }
 .cart_box img{
   width: 100%;
 }
 .cart_box:hover{
-  background-color: rgb(235, 101, 101);
-  box-shadow: 0px 0px 5px .5px rgb(228, 37, 37);
+  background-color: rgb(101, 157, 235);
+  box-shadow: 0px 0px 5px .5px rgb(1, 11, 85);
 }
 .home_input{
   margin-left: 100px;
